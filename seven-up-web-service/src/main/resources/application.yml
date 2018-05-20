@@ -8,11 +8,14 @@ server:
 mybatis:
   type-aliases-package: com.pofy.chqty.entity
   configuration:
-    #配置项：开启下划线到驼峰的自动转换. 作用：将数据库字段根据驼峰规则自动注入到对象属性。
+    # 配置项：开启下划线到驼峰的自动转换. 作用：将数据库字段根据驼峰规则自动注入到对象属性。
     map-underscore-to-camel-case: true
 mapper:
   mappers:
     - tk.mybatis.mapper.common.Mapper
   not-empty: false
-
-
+  # 枚举类型当成基本类型对待
+  enum-as-simple-type: true
+  # 配置为 true 后，updateByExample 和 updateByExampleSelective 都必须设置查询条件才能删除，
+  # 否则会抛出异常
+  safe-update: true
