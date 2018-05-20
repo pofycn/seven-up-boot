@@ -2,6 +2,8 @@ package com.pofy.chqty.entity.sys;
 
 import lombok.Data;
 
+import javax.persistence.Id;
+import javax.persistence.Table;
 import java.util.Date;
 
 /**
@@ -12,7 +14,9 @@ import java.util.Date;
  * @date 2018-05-20
  **/
 @Data
+@Table(name = "sys_user")
 public class SysUser {
+    @Id
     private String id;
 
     private String userName;
@@ -22,8 +26,6 @@ public class SysUser {
     private String randomCode;
 
     private String userStatus;
-
-    private String userRealName;
 
     private String userMobile;
 

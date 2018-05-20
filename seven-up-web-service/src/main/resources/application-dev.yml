@@ -1,6 +1,10 @@
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/chqty?useUnicode=true&characterEncoding=utf-8
+    url: jdbc:mysql://localhost:3306/chqtyTest?useUnicode=true&characterEncoding=utf-8
     username: root
     password: admin123
+logging:
+  level:
+    #打印SQL信息
+    com.pofy.chqty: debug

@@ -20,7 +20,7 @@ public class BaseServiceImpl<T> implements BaseService<T> {
 
     @Override
     public List<T> list(T entity) {
-        return mapper.selectAll();
+        return mapper.select(entity);
     }
 
     @Override
