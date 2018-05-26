@@ -16,12 +16,18 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Result<T> {
 
-    /**result code*/
+    /**
+     * result code
+     */
     private String code;
 
-    /**result message*/
+    /**
+     * result message
+     */
     private String message;
 
-    /**result body*/
+    /**
+     * result body
+     */
     private T body;
 }

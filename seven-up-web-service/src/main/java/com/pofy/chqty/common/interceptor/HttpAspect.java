@@ -26,24 +26,24 @@ public class HttpAspect {
     private final static Logger LOGGER = LoggerFactory.getLogger(HttpAspect.class);
 
     @Pointcut("execution(public * com.pofy.chqty.controller..*(..))")
-    public void log(){
+    public void log() {
 
     }
 
     @Before("log()")
-    public void doBefore(JoinPoint joinPoint){
+    public void doBefore(JoinPoint joinPoint) {
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
         HttpServletRequest request = attributes.getRequest();
         //url
-        LOGGER.info("url:{}",request.getRequestURL());
+        LOGGER.info("URL:{}", request.getRequestURL());
         //method
-        LOGGER.info("method:{}",request.getMethod());
+        LOGGER.info("method:{}", request.getMethod());
         //ip
-        LOGGER.info("ip:{}",request.getRemoteAddr());
+        LOGGER.info("IP Address:{}", request.getRemoteAddr());
         //class_method
-        LOGGER.info("class_method:{}",joinPoint.getSignature().getDeclaringTypeName() + "," + joinPoint.getSignature().getName());
+        LOGGER.info("class method:{}", joinPoint.getSignature().getDeclaringTypeName() + "," + joinPoint.getSignature().getName());
         //args[]
-        LOGGER.info("args:{}",joinPoint.getArgs());
+        LOGGER.info("args:{}", joinPoint.getArgs());
     }
 
     @Around("log()")
@@ -54,17 +54,17 @@ public class HttpAspect {
         } catch (Exception e) {
             //return exceptionHandle.exceptionGet(e);
         }
-        if(result == null){
+        if (result == null) {
             return proceedingJoinPoint.proceed();
-        }else {
+        } else {
             //return result;
         }
         return result;
     }
 
-    @AfterReturning(pointcut = "log()",returning = "object")
-    public void doAfterReturing(Object object){
-        LOGGER.info("response={}",object.toString());
+    @AfterReturning(pointcut = "log()", returning = "object")
+    public void doAfterReturing(Object object) {
+        LOGGER.info("response={}", object.toString());
     }
 }
 

@@ -14,12 +14,13 @@ public class ResultUtils {
 
     /**
      * function -  返回成功，传入返回体具体出參
+     *
      * @param object - 返回结果体
      * @return com.pofy.chqty.entity.Result
      * @author POFY
      * @date 2018-05-22
      */
-    public static Result success(Object object){
+    public static Result success(Object object) {
         Result result = new Result();
         result.setCode(ResultEnum.Y.getCode());
         result.setMessage(ResultEnum.Y.getMessage());
@@ -29,47 +30,51 @@ public class ResultUtils {
 
     /**
      * function - 无参正常返回
+     *
      * @return com.pofy.chqty.entity.Result
      * @author POFY
      * @date 2018-05-22
      */
-    public static Result success(){
+    public static Result success() {
         return success(null);
     }
 
     /**
      * function -自定义成功返回信息
+     *
      * @param code
      * @param msg
      * @return com.pofy.chqty.entity.Result
      * @author POFY
      * @date 2018-05-22
      */
-    public static Result success(String code,String msg,Object body){
-        return new Result(code,msg,body);
+    public static Result success(String code, String msg, Object body) {
+        return new Result(code, msg, body);
     }
 
     /**
      * function -自定义错误信息
+     *
      * @param code
      * @param msg
      * @return com.pofy.chqty.entity.Result
      * @author POFY
      * @date 2018-05-22
      */
-    public static Result error(String code,String msg,Object body){
-        return new Result(code,msg,body);
+    public static Result error(String code, String msg, Object body) {
+        return new Result(code, msg, body);
     }
 
     /**
      * function - 异常返回
+     *
      * @param e - 异常实体
      * @return com.pofy.chqty.entity.Result
      * @author POFY
      * @date 2018-05-22
      */
-    public static Result exception(Exception e){
-        return new Result(ResultEnum.E.getCode(),e.getMessage(),e);
+    public static Result exception(Exception e) {
+        return new Result(ResultEnum.E.getCode(), e.getMessage(), e);
     }
 
 }
