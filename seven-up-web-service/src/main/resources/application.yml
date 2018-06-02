@@ -1,6 +1,6 @@
 spring:
   profiles:
-    active: dev-cmft
+    active: dev
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     #最大活跃数
