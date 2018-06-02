@@ -3,6 +3,8 @@ package com.pofy.chqty.utils;
 import com.pofy.chqty.Enum.ResultEnum;
 import com.pofy.chqty.entity.Result;
 
+import java.util.Date;
+
 /**
  * function - ResultUtils 用于封装向前端返回统一的response
  *
@@ -43,26 +45,26 @@ public class ResultUtils {
      * function -自定义成功返回信息
      *
      * @param code 成功返回码
-     * @param msg 成功信息
+     * @param msg  成功信息
      * @return com.pofy.chqty.entity.Result
      * @author POFY
      * @date 2018-05-22
      */
     public static Result success(String code, String msg, Object body) {
-        return new Result<>(code, msg, body);
+        return new Result<>(code, msg, body, new Date());
     }
 
     /**
      * function -自定义错误信息
      *
      * @param code 错误返回码
-     * @param msg 错误消息
+     * @param msg  错误消息
      * @return com.pofy.chqty.entity.Result
      * @author POFY
      * @date 2018-05-22
      */
     public static Result error(String code, String msg, Object body) {
-        return new Result<>(code, msg, body);
+        return new Result<>(code, msg, body, new Date());
     }
 
     /**
@@ -74,7 +76,7 @@ public class ResultUtils {
      * @date 2018-05-22
      */
     public static Result exception(Exception e) {
-        return new Result<>(ResultEnum.E.getCode(), e.getMessage(), e);
+        return new Result<>(ResultEnum.E.getCode(), e.getMessage(), e, new Date());
     }
 
 }
