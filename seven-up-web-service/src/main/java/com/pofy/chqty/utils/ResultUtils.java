@@ -21,7 +21,7 @@ public class ResultUtils {
      * @date 2018-05-22
      */
     public static Result success(Object object) {
-        Result result = new Result();
+        Result<Object> result = new Result<>();
         result.setCode(ResultEnum.Y.getCode());
         result.setMessage(ResultEnum.Y.getMessage());
         result.setBody(object);
@@ -42,27 +42,27 @@ public class ResultUtils {
     /**
      * function -自定义成功返回信息
      *
-     * @param code
-     * @param msg
+     * @param code 成功返回码
+     * @param msg 成功信息
      * @return com.pofy.chqty.entity.Result
      * @author POFY
      * @date 2018-05-22
      */
     public static Result success(String code, String msg, Object body) {
-        return new Result(code, msg, body);
+        return new Result<>(code, msg, body);
     }
 
     /**
      * function -自定义错误信息
      *
-     * @param code
-     * @param msg
+     * @param code 错误返回码
+     * @param msg 错误消息
      * @return com.pofy.chqty.entity.Result
      * @author POFY
      * @date 2018-05-22
      */
     public static Result error(String code, String msg, Object body) {
-        return new Result(code, msg, body);
+        return new Result<>(code, msg, body);
     }
 
     /**
@@ -74,7 +74,7 @@ public class ResultUtils {
      * @date 2018-05-22
      */
     public static Result exception(Exception e) {
-        return new Result(ResultEnum.E.getCode(), e.getMessage(), e);
+        return new Result<>(ResultEnum.E.getCode(), e.getMessage(), e);
     }
 
 }
