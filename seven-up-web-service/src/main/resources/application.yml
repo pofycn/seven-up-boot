@@ -1,6 +1,9 @@
 spring:
   profiles:
     active: dev
+  output:
+    ansi:
+      enabled: detect
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     #最大活跃数
