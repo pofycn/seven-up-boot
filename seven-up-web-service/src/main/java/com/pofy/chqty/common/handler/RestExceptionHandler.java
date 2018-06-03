@@ -1,4 +1,4 @@
-package com.pofy.chqty.common.interceptor;
+package com.pofy.chqty.common.handler;
 
 import com.pofy.chqty.entity.Result;
 import com.pofy.chqty.utils.ResultUtils;

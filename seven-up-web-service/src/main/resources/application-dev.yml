@@ -2,6 +2,6 @@ debug: false
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/chqtyTest?useUnicode=true&characterEncoding=utf-8
+    url: jdbc:mysql://localhost:3306/chqtyTest?useUnicode=true&characterEncoding=utf-8&useSSL=true
     username: root
     password: admin123
