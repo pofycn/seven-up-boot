@@ -1,6 +1,6 @@
 package com.pofy.chqty.utils;
 
-import com.pofy.chqty.Enum.ResultEnum;
+import com.pofy.chqty.enums.ResultEnum;
 import com.pofy.chqty.entity.Result;
 
 import java.util.Date;

@@ -1,4 +1,4 @@
-package com.pofy.chqty.DTO.sys;
+package com.pofy.chqty.dto.sys;
 
 import lombok.Data;
 

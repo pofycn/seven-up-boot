@@ -1,6 +1,6 @@
 package com.pofy.chqty.controller.sys;
 
-import com.pofy.chqty.DTO.sys.SysUserDTO;
+import com.pofy.chqty.dto.sys.SysUserDTO;
 import com.pofy.chqty.common.annotation.Log;
 import com.pofy.chqty.entity.sys.SysUser;
 import com.pofy.chqty.service.sys.SysUserService;
