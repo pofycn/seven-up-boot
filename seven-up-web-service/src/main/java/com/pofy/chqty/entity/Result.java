@@ -41,15 +41,6 @@ public class Result<T> implements Serializable {
      */
     private Date time;
 
-    public Result() {
-    }
-
-    public Result(String code, String message, T body, Date time) {
-        this.code = code;
-        this.message = message;
-        this.body = body;
-        this.time = time;
-    }
 
     @Override
     public String toString() {
