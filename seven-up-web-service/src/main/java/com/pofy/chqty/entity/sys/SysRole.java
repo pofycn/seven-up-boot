@@ -7,28 +7,24 @@ import javax.persistence.Table;
 import java.util.Date;
 
 /**
- * function - 系统用户表对应实体
+ * function - 系统角色对应实体
  *
  * @author POFY
  * @version 1.0
- * @date 2018-05-20
+ * @date 2018-06-07
  **/
 @Data
-@Table(name = "sys_user")
-public class SysUser {
+@Table(name = "sys_role")
+public class SysRole {
 
     @Id
-    private String userId;
+    private String roleId;
 
-    private String userName;
+    private String roleName;
 
-    private String userPassword;
+    private String roleDesc;
 
-    private String randomCode;
-
-    private String userStatus;
-
-    private String userMobile;
+    private String roleOrder;
 
     private Date createdDate;
 
@@ -37,6 +33,6 @@ public class SysUser {
     private Date updatedDate;
 
     private String updatedBy;
-
-    private Integer roleId;
 }
+
+
