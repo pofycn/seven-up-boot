@@ -4,6 +4,9 @@ spring:
   output:
     ansi:
       enabled: detect
+  devtools:
+    restart:
+      exclude: templates
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     #最大活跃数
