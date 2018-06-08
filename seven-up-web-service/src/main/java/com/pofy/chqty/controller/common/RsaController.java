@@ -1,4 +1,4 @@
-package com.pofy.chqty.controller.sys;
+package com.pofy.chqty.controller.common;
 
 import com.pofy.chqty.entity.Result;
 import com.pofy.chqty.utils.RSAUtils;

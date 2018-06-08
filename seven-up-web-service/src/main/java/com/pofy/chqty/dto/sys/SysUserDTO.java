@@ -14,7 +14,7 @@ import java.util.Date;
 @Data
 public class SysUserDTO {
 
-    private String id;
+    private String userId;
 
     private String userName;
 
