@@ -11,6 +11,6 @@ Seven-up-boot是一个基于Springboot开发的快速开发平台，目的是减
 2. git clone https://github.com/pofycn/seven-up-boot.git
 3. open IDEA -> select <import project> or checkout from VCS
 4. open it as a Maven project
-5. wait a while after project built, the use maven plugins clean and install.
+5. wait a while after project built, use maven plugins clean and install project.
 6. run the RunService.java
 
