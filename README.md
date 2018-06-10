@@ -7,7 +7,7 @@ Seven-up-boot是一个基于Springboot开发的快速开发平台，目的是减
 * 数据库连接池：druid
 
 ## Usage:
-1. cd <project path>
+1. cd "project path"
 2. git clone https://github.com/pofycn/seven-up-boot.git
 3. open IDEA -> select <import project> or checkout from VCS
 4. open it as a Maven project
