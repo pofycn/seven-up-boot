@@ -52,7 +52,7 @@ public class SysUserController {
             BeanUtils.copyProperties(result, resultDTO);
             resp = ResultUtils.success(resultDTO);
         } catch (Exception e) {
-            LOGGER.error("查询用户详情", e);
+            LOGGER.error("查询用户详情失败", e);
             resp = ResultUtils.exception(e);
         }
         return resp;
@@ -116,7 +116,7 @@ public class SysUserController {
         try {
             SysUser user = new SysUser();
             BeanUtils.copyProperties(userDTO, user);
-            int result = sysUserService.update(user);
+            sysUserService.update(user);
             resp = ResultUtils.success(ResultEnum.Y.getCode(),ResultEnum.Y.getMessage(),"更新用户成功");
         } catch (Exception e) {
             LOGGER.error("更新用户失败", e);
