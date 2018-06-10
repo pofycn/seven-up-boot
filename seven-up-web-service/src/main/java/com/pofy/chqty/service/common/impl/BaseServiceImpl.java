@@ -19,6 +19,11 @@ public class BaseServiceImpl<T> implements BaseService<T> {
     private Mapper<T> mapper;
 
     @Override
+    public List<T> listAll() {
+        return mapper.selectAll();
+    }
+
+    @Override
     public List<T> list(T entity) {
         return mapper.select(entity);
     }

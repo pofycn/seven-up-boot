@@ -76,7 +76,7 @@ public class ResultUtils {
      * @date 2018-05-22
      */
     public static Result exception(Exception e) {
-        return new Result<>(ResultEnum.E.getCode(), e.getMessage(), e, new Date());
+        return new Result<>(ResultEnum.E.getCode(), e.getMessage(), null, new Date());
     }
 
 }

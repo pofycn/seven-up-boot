@@ -1,6 +1,6 @@
 spring:
   profiles:
-    active: dev-cmft
+    active: dev
   output:
     ansi:
       enabled: detect
