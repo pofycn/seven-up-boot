@@ -18,7 +18,7 @@ import java.util.Date;
 public class SysRole {
 
     @Id
-    private String roleId;
+    private Integer roleId;
 
     private String roleName;
 

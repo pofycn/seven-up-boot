@@ -14,7 +14,7 @@ import java.util.Date;
 @Data
 public class SysRoleDTO {
 
-    private String roleId;
+    private Integer roleId;
 
     private String roleName;
 

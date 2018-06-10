@@ -18,7 +18,7 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * function - 系统用户controller
+ * function - 系统用户管理接口
  *
  * @author POFY
  * @version 1.0
@@ -31,7 +31,7 @@ public class SysUserController {
     private final static Logger LOGGER = LoggerFactory.getLogger(SysUserController.class);
 
     @Autowired
-    SysUserService sysUserService;
+    private SysUserService sysUserService;
 
     /**
      * function - 添加用户
